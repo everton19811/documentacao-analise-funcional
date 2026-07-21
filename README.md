@@ -20,3 +20,9 @@ Este repositório reúne modelos práticos, artefatos funcionais e boas prática
 │   ├── User_Stories_Exemplos.md
 │   └── Processos_BPMN_Fluxogramas.md
 └── README.md
+```
+## 📋 Funcionalidades e Artefatos Inclusos
+- ** BFR (Business Functional Requirements): Modelo completo de Especificação Funcional para Integração Financeira.
+- ** Histórias de Usuário (User Stories): Casos reais com cenários de testes e critérios de aceite claros.
+- ** Processos (BPMN): Descrição e fluxos de negócio cobrindo regras de validação e conciliação de dados.
+- ** Resumo de Metodologias Ágeis: Boas práticas de gestão de backlog, dinâmicas de Scrum e fluxo contínuo em Kanban.
