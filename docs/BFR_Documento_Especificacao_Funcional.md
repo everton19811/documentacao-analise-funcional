@@ -1,8 +1,3 @@
----
-
-### 1.2 `docs/BFR_Documento_Especificacao_Funcional.md` (Arquivo com Modelo de Especificação)
-
-```markdown
 # 📄 Documento de Especificação Funcional (BFR)
 
 **Projeto:** Automação e Integração de Conciliação Financeira  
