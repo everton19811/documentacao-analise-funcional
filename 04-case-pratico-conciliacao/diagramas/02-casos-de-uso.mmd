@@ -1,0 +1,10 @@
+flowchart LR
+    A((Analista)) --- UC1[UC-01 Conciliar]
+    A --- UC2[UC-02 Tratar Divergência]
+    C((Coord)) --- UC3[UC-03 Aprovar > 10k]
+    D((Diretor)) --- UC4[UC-04 Aprovar > 100k]
+    AU((Auditor KPMG)) --- UC5[UC-05 Consultar Trilha]
+    ADM((Admin)) --- UC6[UC-06 Configurar Regras]
+    UC1 -.include.-> UC7[Validar Formato RN-01]
+    UC2 -.include.-> UC8[Validar SoD RN-15]
+    UC2 -.extend.-> UC3

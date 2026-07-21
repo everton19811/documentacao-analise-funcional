@@ -1,0 +1,17 @@
+flowchart LR
+    S((Início)) --> IMP[Importar Extrato<br/>OFX/CNAB/API]
+    IMP --> VAL{Formato<br/>válido? RN-01}
+    VAL -->|Não| ERR[Exibir erro<br/>Retornar]
+    VAL -->|Sim| SAP[Ler V_RAZAO<br/>SAP]
+    SAP --> CON[Aplicar RN-05<br/>Conciliar]
+    CON --> DIV{Divergência?}
+    DIV -->|Não| APR[Aprovar<br/>automático]
+    DIV -->|Sim| Q[Fila Exceção]
+    Q --> AN[Analista trata<br/>UC-02]
+    AN --> LIM{> R$ 10k?<br/>RN-08}
+    LIM -->|Sim| CO[Coord. aprova]
+    LIM -->|Não| REG[Registrar trilha<br/>NFR-05]
+    CO --> REG
+    APR --> REG
+    REG --> F((Fim))
+    ERR --> F

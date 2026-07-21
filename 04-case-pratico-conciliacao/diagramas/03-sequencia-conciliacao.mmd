@@ -1,0 +1,19 @@
+sequenceDiagram
+    actor A as Analista
+    participant CFA
+    participant SAP
+    participant M as SMTP
+    A->>CFA: Login (SSO Azure AD)
+    A->>CFA: Seleciona banco + data
+    A->>CFA: Upload extrato
+    CFA->>CFA: Valida RN-01
+    CFA->>SAP: SELECT V_RAZAO_CONTABIL
+    SAP-->>CFA: Retorno
+    CFA->>CFA: Aplica RN-05
+    CFA-->>A: Resultado
+    alt Divergência > R$ 10k
+        CFA->>M: E-mail Coord (RN-08)
+    end
+    A->>CFA: Trata divergência (UC-02)
+    CFA->>CFA: Valida SoD (RN-15)
+    CFA->>CFA: Grava trilha (NFR-05)
